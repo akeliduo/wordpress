@@ -53,7 +53,11 @@ $table_prefix  = 'wp_';
 | prefer to be secure by default.
 |
 */
+/* 允许一个网站绑定多个域名 */ 
+define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
+define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST']);
 
+/* 不强制将http转化为https，在后台管理上 */
 define('FORCE_SSL_ADMIN', false);
 
 /*
